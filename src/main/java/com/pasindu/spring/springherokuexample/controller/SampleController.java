@@ -12,4 +12,9 @@ public class SampleController {
     public String sayHello(){
         return "Hello, How are you ?";
     }
+    
+     @GetMapping("/hello/{input}")
+    public String sayManHello(@PathVariable String input) {
+        return "Welcome " + input;
+    }
 }
